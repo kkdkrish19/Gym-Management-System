@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="GYMVERSE Admin Command Center"
+    >
+
+    <title>GYMVERSE | Admin Command Center</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="site-header">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-mark">
+            G
+        </span>
+
+        <span>
+            GYMVERSE
+        </span>
+
+    </a>
+
+
+    <nav class="main-nav">
+
+        <a href="index.html">
+            Member View
+        </a>
+
+        <a href="admin.html" class="active">
+            Admin
+        </a>
+
+        <a href="#members">
+            Members
+        </a>
+
+        <a href="#equipment">
+            Equipment
+        </a>
+
+        <a href="#reports">
+            Reports
+        </a>
+
+    </nav>
+
+
+    <a
+        href="index.html"
+        class="header-btn"
+    >
+        Exit Admin
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     ADMIN HERO
+     ===================================================== -->
+
+<section class="admin-hero">
+
+    <div>
+
+        <p class="kicker">
+            ADMIN COMMAND CENTER
+        </p>
+
+        <h1>
+            Gym operations,
+            <br>
+            <span>
+                one screen.
+            </span>
+        </h1>
+
+        <p class="admin-description">
+
+            Monitor your entire gym in real time.
+
+            Manage members, trainers, memberships,
+            payments, equipment, attendance and
+            fitness operations from one centralized
+            dashboard.
+
+        </p>
+
+    </div>
+
+
+    <!-- System Status -->
+
+    <div class="system-status">
+
+        <div class="status-header">
+
+            <span>
+                SYSTEM STATUS
+            </span>
+
+            <b>
+                ● OPERATIONAL
+            </b>
+
+        </div>
+
+
+        <div class="system-circle">
+
+            <div>
+
+                <strong>
+                    98%
+                </strong>
+
+                <small>
+                    SYSTEM HEALTH
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="system-details">
+
+            <span>
+                DATABASE
+                <b>ONLINE</b>
+            </span>
+
+            <span>
+                API
+                <b>ONLINE</b>
+            </span>
+
+            <span>
+                BACKUP
+                <b>SYNCED</b>
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     KEY STATISTICS
+     ===================================================== -->
+
+<section class="admin-section">
+
+
+    <div class="admin-stat-grid">
+
+
+        <article class="admin-stat">
+
+            <div class="admin-stat-top">
+
+                <span>
+                    TOTAL MEMBERS
+                </span>
+
+                <b>
+                    +8.4%
+                </b>
+
+            </div>
+
+            <strong>
+                1,240
+            </strong>
+
+            <small>
+                94 new members this month
+            </small>
+
+        </article>
+
+
+        <article class="admin-stat">
+
+            <div class="admin-stat-top">
+
+                <span>
+                    ACTIVE TRAINERS
+                </span>
+
+                <b>
+                    +2
+                </b>
+
+            </div>
+
+            <strong>
+                28
+            </strong>
+
+            <small>
+                24 trainers currently active
+            </small>
+
+        </article>
+
+
+        <article class="admin-stat">
+
+            <div class="admin-stat-top">
+
+                <span>
+                    MONTHLY REVENUE
+                </span>
+
+                <b>
+                    +12.6%
+                </b>
+
+            </div>
+
+            <strong>
+                ₹8.4L
+            </strong>
+
+            <small>
+                Compared with previous month
+            </small>
+
+        </article>
+
+
+        <article class="admin-stat">
+
+            <div class="admin-stat-top">
+
+                <span>
+                    LIVE OCCUPANCY
+                </span>
+
+                <b>
+                    MODERATE
+                </b>
+
+            </div>
+
+            <strong>
+                68%
+            </strong>
+
+            <small>
+                68 of 100 capacity currently used
+            </small>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMBERS + GYM OCCUPANCY
+     ===================================================== -->
+
+<section
+    class="admin-section"
+    id="members"
+>
+
+
+    <div class="admin-grid">
+
+
+        <!-- MEMBERS -->
+
+        <article class="admin-panel large-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="kicker">
+                        MEMBER MANAGEMENT
+                    </p>
+
+                    <h2>
+                        Recent Members
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="admin-action"
+                    id="addMemberButton"
+                >
+                    + Add Member
+                </button>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="memberSearch"
+                    placeholder="Search member..."
+                >
+
+            </div>
+
+
+            <!-- Member Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                MEMBER
+                            </th>
+
+                            <th>
+                                NUMBER
+                            </th>
+
+                            <th>
+                                PLAN
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                            <th>
+                                ACTION
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="memberTable">
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-member">
+
+                                    <div class="table-avatar">
+                                        JR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Jeet Rangrej
+                                        </strong>
+
+                                        <small>
+                                            jeet@gymverse.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="member-id">
+                                    #4062
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="plan-tag">
+                                    PRO
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="status-active">
+                                    ● Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <button class="view-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-member">
+
+                                    <div class="table-avatar">
+                                        AP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Aarav Patel
+                                        </strong>
+
+                                        <small>
+                                            aarav@gymverse.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="member-id">
+                                    #1047
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="plan-tag">
+                                    ELITE
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="status-active">
+                                    ● Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <button class="view-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-member">
+
+                                    <div class="table-avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Shah
+                                        </strong>
+
+                                        <small>
+                                            rahul@gymverse.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="member-id">
+                                    #2183
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="plan-tag">
+                                    BASIC
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="status-warning">
+                                    ● Renewal Soon
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <button class="view-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-member">
+
+                                    <div class="table-avatar">
+                                        KM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Krish Mehta
+                                        </strong>
+
+                                        <small>
+                                            krish@gymverse.com
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                <span class="member-id">
+                                    #7315
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="plan-tag">
+                                    PRO
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span class="status-active">
+                                    ● Active
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <button class="view-btn">
+                                    View
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- OCCUPANCY -->
+
+        <article class="admin-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="kicker">
+                        LIVE MONITOR
+                    </p>
+
+                    <h2>
+                        Gym Occupancy
+                    </h2>
+
+                </div>
+
+                <span class="live-dot">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="occupancy-circle">
+
+                <div>
+
+                    <strong>
+                        68%
+                    </strong>
+
+                    <small>
+                        OCCUPIED
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="occupancy-info">
+
+                <div>
+
+                    <span>
+                        Current
+                    </span>
+
+                    <strong>
+                        68 Members
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Capacity
+                    </span>
+
+                    <strong>
+                        100 Members
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Available
+                    </span>
+
+                    <strong class="available">
+                        32 Spots
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="crowd-status">
+
+                <span>
+                    ●
+                </span>
+
+                Moderate Crowd
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EQUIPMENT
+     ===================================================== -->
+
+<section
+    class="admin-section"
+    id="equipment"
+>
+
+
+    <div class="panel-heading">
+
+        <div>
+
+            <p class="kicker">
+                SMART EQUIPMENT
+            </p>
+
+            <h2>
+                Equipment Status
+            </h2>
+
+        </div>
+
+        <button
+            class="admin-action"
+            id="refreshEquipment"
+        >
+            ↻ Refresh
+        </button>
+
+    </div>
+
+
+    <div class="equipment-grid">
+
+
+        <article class="equipment-card">
+
+            <div class="equipment-icon">
+                BP
+            </div>
+
+            <div>
+
+                <h3>
+                    Bench Press
+                </h3>
+
+                <p>
+                    Zone A · Station 01
+                </p>
+
+            </div>
+
+            <span class="equipment-available">
+                AVAILABLE
+            </span>
+
+        </article>
+
+
+        <article class="equipment-card occupied">
+
+            <div class="equipment-icon">
+                SQ
+            </div>
+
+            <div>
+
+                <h3>
+                    Squat Rack
+                </h3>
+
+                <p>
+                    Zone A · Station 04
+                </p>
+
+            </div>
+
+            <span class="equipment-occupied">
+                OCCUPIED
+            </span>
+
+        </article>
+
+
+        <article class="equipment-card">
+
+            <div class="equipment-icon">
+                TR
+            </div>
+
+            <div>
+
+                <h3>
+                    Treadmill 01
+                </h3>
+
+                <p>
+                    Cardio Zone · 01
+                </p>
+
+            </div>
+
+            <span class="equipment-available">
+                AVAILABLE
+            </span>
+
+        </article>
+
+
+        <article class="equipment-card maintenance">
+
+            <div class="equipment-icon">
+                CP
+            </div>
+
+            <div>
+
+                <h3>
+                    Cable Machine
+                </h3>
+
+                <p>
+                    Strength Zone · 03
+                </p>
+
+            </div>
+
+            <span class="equipment-maintenance">
+                SERVICE
+            </span>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REPORTS
+     ===================================================== -->
+
+<section
+    class="admin-section"
+    id="reports"
+>
+
+
+    <div class="admin-grid">
+
+
+        <!-- ATTENDANCE -->
+
+        <article class="admin-panel">
+
+            <p class="kicker">
+                ATTENDANCE ANALYTICS
+            </p>
+
+            <h2>
+                Weekly Attendance
+            </h2>
+
+
+            <div class="chart">
+
+                <div
+                    class="chart-bar"
+                    style="--height:55%"
+                >
+                    <span>MON</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:72%"
+                >
+                    <span>TUE</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:61%"
+                >
+                    <span>WED</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:84%"
+                >
+                    <span>THU</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:76%"
+                >
+                    <span>FRI</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:92%"
+                >
+                    <span>SAT</span>
+                </div>
+
+                <div
+                    class="chart-bar"
+                    style="--height:48%"
+                >
+                    <span>SUN</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <article class="admin-panel">
+
+            <p class="kicker">
+                QUICK ACTIONS
+            </p>
+
+            <h2>
+                Management
+            </h2>
+
+
+            <div class="quick-actions">
+
+                <button>
+                    <span>＋</span>
+                    Add Member
+                </button>
+
+                <button>
+                    <span>♙</span>
+                    Add Trainer
+                </button>
+
+                <button>
+                    <span>₹</span>
+                    Record Payment
+                </button>
+
+                <button>
+                    <span>▣</span>
+                    Add Equipment
+                </button>
+
+                <button>
+                    <span>▦</span>
+                    Create Session
+                </button>
+
+                <button>
+                    <span>↗</span>
+                    Generate Report
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <span>
+        GYMVERSE © 2026
+    </span>
+
+    <span>
+        ADMIN COMMAND CENTER · WEB APPLICATION DEVELOPMENT
+    </span>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     ADMIN JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MEMBER SEARCH
+   ===================================================== */
+
+const memberSearch =
+    document.getElementById(
+        "memberSearch"
+    );
+
+
+const memberTable =
+    document.getElementById(
+        "memberTable"
+    );
+
+
+if (
+    memberSearch &&
+    memberTable
+) {
+
+    memberSearch.addEventListener(
+        "input",
+        function () {
+
+            const search =
+                memberSearch.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const rows =
+                memberTable.querySelectorAll(
+                    "tr"
+                );
+
+
+            rows.forEach(
+                row => {
+
+                    const text =
+                        row.textContent
+                            .toLowerCase();
+
+
+                    if (
+                        text.includes(search)
+                    ) {
+
+                        row.style.display =
+                            "";
+
+                    }
+
+                    else {
+
+                        row.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   VIEW MEMBER BUTTONS
+   ===================================================== */
+
+const viewButtons =
+    document.querySelectorAll(
+        ".view-btn"
+    );
+
+
+viewButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                alert(
+                    "Member profile module will open here in the full database version."
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   ADD MEMBER
+   ===================================================== */
+
+const addMemberButton =
+    document.getElementById(
+        "addMemberButton"
+    );
+
+
+if (addMemberButton) {
+
+    addMemberButton.addEventListener(
+        "click",
+        function () {
+
+            const name =
+                prompt(
+                    "Enter new member name:"
+                );
+
+
+            if (!name) {
+                return;
+            }
+
+
+            const number =
+                Math.floor(
+                    1000 +
+                    Math.random() * 9000
+                );
+
+
+            alert(
+                `Member created successfully!\n\nName: ${name}\nMember Number: ${number}`
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   REFRESH EQUIPMENT
+   ===================================================== */
+
+const refreshEquipment =
+    document.getElementById(
+        "refreshEquipment"
+    );
+
+
+if (refreshEquipment) {
+
+    refreshEquipment.addEventListener(
+        "click",
+        function () {
+
+            refreshEquipment.textContent =
+                "✓ Updated";
+
+
+            setTimeout(
+                () => {
+
+                    refreshEquipment.textContent =
+                        "↻ Refresh";
+
+                },
+                1800
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+   ===================================================== */
+
+const quickActions =
+    document.querySelectorAll(
+        ".quick-actions button"
+    );
+
+
+quickActions.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                alert(
+                    `${button.textContent.trim()} module is ready for backend/database integration.`
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   ADMIN CARD REVEAL
+   ===================================================== */
+
+const adminCards =
+    document.querySelectorAll(
+        ".admin-stat, .admin-panel, .equipment-card"
+    );
+
+
+if (
+    "IntersectionObserver"
+    in window
+) {
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+
+    adminCards.forEach(
+        card => {
+
+            observer.observe(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     ADMIN PAGE CSS
+     ===================================================== -->
+
+<style>
+
+/* =====================================================
+   ADMIN HERO
+   ===================================================== */
+
+.admin-hero {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:80px 6vw 60px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+.admin-hero h1 {
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            82px
+        );
+
+    line-height:.92;
+
+    letter-spacing:-.07em;
+
+    margin:18px 0;
+
+}
+
+
+.admin-hero h1 span {
+
+    color:var(--lime);
+
+}
+
+
+.admin-description {
+
+    max-width:650px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =====================================================
+   SYSTEM STATUS
+   ===================================================== */
+
+.system-status {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b16,
+            #10151b
+        );
+
+    border:1px solid #35442b;
+
+    border-radius:26px;
+
+    padding:25px;
+
+}
+
+
+.status-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:var(--muted);
+
+    font:
+        10px
+        "DM Mono",
+        monospace;
+
+    letter-spacing:.1em;
+
+}
+
+
+.status-header b {
+
+    color:var(--lime);
+
+}
+
+
+.system-circle {
+
+    width:190px;
+
+    height:190px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    background:
+        conic-gradient(
+            var(--lime) 0 98%,
+            #29302c 98%
+        );
+
+}
+
+
+.system-circle > div {
+
+    width:145px;
+
+    height:145px;
+
+    border-radius:50%;
+
+    background:var(--panel);
+
+    display:grid;
+
+    place-items:center;
+
+    align-content:center;
+
+    text-align:center;
+
+}
+
+
+.system-circle strong {
+
+    font-size:36px;
+
+}
+
+
+.system-circle small {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.system-details {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:10px;
+
+}
+
+
+.system-details span {
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+
+.system-details b {
+
+    display:block;
+
+    color:var(--lime);
+
+    margin-top:4px;
+
+}
+
+
+/* =====================================================
+   ADMIN SECTIONS
+   ===================================================== */
+
+.admin-section {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:30px 6vw;
+
+}
+
+
+.admin-stat-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.admin-stat {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    transition:.3s;
+
+}
+
+
+.admin-stat:hover {
+
+    transform:translateY(-3px);
+
+    border-color:#3a4654;
+
+}
+
+
+.admin-stat-top {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.admin-stat-top b {
+
+    color:var(--lime);
+
+}
+
+
+.admin-stat > strong {
+
+    display:block;
+
+    font-size:36px;
+
+    margin:15px 0 3px;
+
+}
+
+
+.admin-stat > small {
+
+    color:var(--muted);
+
+    font-size:10px;
+
+}
+
+
+/* =====================================================
+   ADMIN GRID
+   ===================================================== */
+
+.admin-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr .6fr;
+
+    gap:15px;
+
+}
+
+
+.admin-panel {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    padding:24px;
+
+}
+
+
+.panel-heading {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+
+.panel-heading h2 {
+
+    font-size:24px;
+
+    letter-spacing:-.04em;
+
+    margin-top:5px;
+
+}
+
+
+.admin-action {
+
+    border:1px solid var(--line);
+
+    background:var(--panel2);
+
+    color:var(--lime);
+
+    border-radius:11px;
+
+    padding:10px 13px;
+
+    font-size:10px;
+
+}
+
+
+.admin-action:hover {
+
+    border-color:var(--lime);
+
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.search-box {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#090c11;
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    padding:0 12px;
+
+    margin-bottom:15px;
+
+}
+
+
+.search-box span {
+
+    color:var(--muted);
+
+}
+
+
+.search-box input {
+
+    width:100%;
+
+    background:transparent;
+
+    border:0;
+
+    outline:0;
+
+    color:var(--text);
+
+    padding:12px 0;
+
+    font-size:12px;
+
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.table-container {
+
+    overflow-x:auto;
+
+}
+
+
+table {
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+th {
+
+    color:#626b78;
+
+    text-align:left;
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+    padding:12px;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+
+td {
+
+    padding:13px 12px;
+
+    border-bottom:1px solid #1e242d;
+
+    font-size:11px;
+
+}
+
+
+.table-member {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.table-avatar {
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:10px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#222a34;
+
+    color:var(--lime);
+
+    font-size:10px;
+
+    font-weight:800;
+
+}
+
+
+.table-member strong {
+
+    display:block;
+
+}
+
+
+.table-member small {
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+
+.member-id {
+
+    font:
+        10px
+        "DM Mono",
+        monospace;
+
+    color:var(--text);
+
+}
+
+
+.plan-tag {
+
+    color:var(--lime);
+
+    border:1px solid #35442b;
+
+    padding:4px 7px;
+
+    border-radius:20px;
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.status-active {
+
+    color:var(--lime);
+
+    font-size:9px;
+
+}
+
+
+.status-warning {
+
+    color:var(--orange);
+
+    font-size:9px;
+
+}
+
+
+.view-btn {
+
+    background:transparent;
+
+    border:1px solid var(--line);
+
+    color:var(--muted);
+
+    border-radius:8px;
+
+    padding:6px 9px;
+
+    font-size:9px;
+
+}
+
+
+.view-btn:hover {
+
+    color:var(--lime);
+
+    border-color:var(--lime);
+
+}
+
+
+/* =====================================================
+   OCCUPANCY
+   ===================================================== */
+
+.live-dot {
+
+    color:var(--lime);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.occupancy-circle {
+
+    width:200px;
+
+    height:200px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            var(--lime) 0 68%,
+            #28302d 68%
+        );
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.occupancy-circle > div {
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    background:var(--panel);
+
+    display:grid;
+
+    place-items:center;
+
+    align-content:center;
+
+    text-align:center;
+
+}
+
+
+.occupancy-circle strong {
+
+    font-size:38px;
+
+}
+
+
+.occupancy-circle small {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.occupancy-info {
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+
+.occupancy-info div {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid var(--line);
+
+    padding-top:10px;
+
+}
+
+
+.occupancy-info span {
+
+    color:var(--muted);
+
+    font-size:10px;
+
+}
+
+
+.occupancy-info strong {
+
+    font-size:10px;
+
+}
+
+
+.available {
+
+    color:var(--lime);
+
+}
+
+
+.crowd-status {
+
+    margin-top:18px;
+
+    background:#c9ff4a08;
+
+    border:1px solid #35442b;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    color:var(--lime);
+
+    font-size:10px;
+
+}
+
+
+/* =====================================================
+   EQUIPMENT
+   ===================================================== */
+
+.equipment-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.equipment-card {
+
+    display:grid;
+
+    grid-template-columns:auto 1fr;
+
+    gap:12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    position:relative;
+
+}
+
+
+.equipment-icon {
+
+    width:45px;
+
+    height:45px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:12px;
+
+    background:#202731;
+
+    color:var(--lime);
+
+    font:
+        10px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.equipment-card h3 {
+
+    font-size:13px;
+
+}
+
+
+.equipment-card p {
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    margin-top:3px;
+
+}
+
+
+.equipment-card > span {
+
+    grid-column:1/-1;
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+    padding-top:8px;
+
+    border-top:1px solid var(--line);
+
+}
+
+
+.equipment-available {
+
+    color:var(--lime);
+
+}
+
+
+.equipment-occupied {
+
+    color:var(--danger);
+
+}
+
+
+.equipment-maintenance {
+
+    color:var(--orange);
+
+}
+
+
+/* =====================================================
+   CHART
+   ===================================================== */
+
+.chart {
+
+    height:230px;
+
+    display:flex;
+
+    align-items:end;
+
+    gap:12px;
+
+    padding-top:30px;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+
+.chart-bar {
+
+    flex:1;
+
+    height:var(--height);
+
+    min-height:25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--lime),
+            #60782a
+        );
+
+    border-radius:
+        8px 8px 0 0;
+
+    position:relative;
+
+    animation:
+        chartRise .8s ease-out;
+
+}
+
+
+.chart-bar span {
+
+    position:absolute;
+
+    bottom:-24px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:var(--muted);
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+@keyframes chartRise {
+
+    from {
+
+        height:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+   ===================================================== */
+
+.quick-actions {
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+.quick-actions button {
+
+    border:1px solid var(--line);
+
+    background:#0b0f14;
+
+    color:var(--muted);
+
+    padding:14px 10px;
+
+    border-radius:12px;
+
+    font-size:10px;
+
+    transition:.2s;
+
+}
+
+
+.quick-actions button span {
+
+    display:block;
+
+    color:var(--lime);
+
+    font-size:20px;
+
+    margin-bottom:5px;
+
+}
+
+
+.quick-actions button:hover {
+
+    color:var(--text);
+
+    border-color:var(--lime);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+.admin-stat,
+.admin-panel,
+.equipment-card {
+
+    opacity:0;
+
+    transform:translateY(18px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+
+.admin-stat.visible,
+.admin-panel.visible,
+.equipment-card.visible {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* =====================================================
+   ADMIN RESPONSIVE
+   ===================================================== */
+
+@media(max-width:1000px) {
+
+    .admin-hero {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .admin-stat-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .admin-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .equipment-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:650px) {
+
+    .admin-hero {
+
+        padding:55px 18px 40px;
+
+    }
+
+    .admin-section {
+
+        padding:
+            25px 18px;
+
+    }
+
+    .admin-stat-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .equipment-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .system-details {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .system-details span {
+
+        border-top:1px solid var(--line);
+
+        padding-top:8px;
+
+    }
+
+    .panel-heading {
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .panel-heading h2 {
+
+        font-size:20px;
+
+    }
+
+    .admin-hero h1 {
+
+        font-size:50px;
+
+    }
+
+    .quick-actions {
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</body>
+
+</html>

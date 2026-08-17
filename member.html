@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="GYMVERSE Member Dashboard"
+    >
+
+    <title>GYMVERSE | Member Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="site-header">
+
+    <a
+        href="index.html"
+        class="brand"
+    >
+
+        <span class="brand-mark">
+            G
+        </span>
+
+        <span>
+            GYMVERSE
+        </span>
+
+    </a>
+
+
+    <nav class="main-nav">
+
+        <a
+            href="member.html"
+            class="active"
+        >
+            Dashboard
+        </a>
+
+        <a href="#workout">
+            Workout
+        </a>
+
+        <a href="#progress">
+            Progress
+        </a>
+
+        <a href="#nutrition">
+            Nutrition
+        </a>
+
+        <a href="#schedule">
+            Schedule
+        </a>
+
+    </nav>
+
+
+    <a
+        href="index.html"
+        class="header-btn"
+    >
+        Logout
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     MEMBER HERO
+     ===================================================== -->
+
+<section class="member-hero">
+
+    <div class="member-welcome">
+
+        <p class="kicker">
+            MEMBER DASHBOARD · MONDAY 17 AUG 2026
+        </p>
+
+        <h1>
+            Good afternoon,
+            <br>
+            <span>Jeet.</span>
+        </h1>
+
+        <p>
+            Your fitness journey continues today.
+            Stay consistent and keep moving toward
+            your next milestone.
+        </p>
+
+
+        <div class="member-actions">
+
+            <a
+                href="#workout"
+                class="btn primary"
+            >
+                START WORKOUT →
+            </a>
+
+            <a
+                href="#checkin"
+                class="btn secondary"
+            >
+                CHECK IN
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Fitness Score -->
+
+    <div class="fitness-score">
+
+        <div class="score-label">
+            FITNESS SCORE
+        </div>
+
+        <div class="score-ring">
+
+            <div>
+
+                <strong>
+                    87
+                </strong>
+
+                <small>
+                    /100
+                </small>
+
+            </div>
+
+        </div>
+
+        <span>
+            EXCELLENT
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK STATS
+     ===================================================== -->
+
+<section class="member-section">
+
+    <div class="member-stat-grid">
+
+
+        <article class="member-stat">
+
+            <span>
+                MEMBER NUMBER
+            </span>
+
+            <strong class="member-id-large">
+                #4062
+            </strong>
+
+            <small>
+                Your unique gym access number
+            </small>
+
+        </article>
+
+
+        <article class="member-stat">
+
+            <span>
+                WORKOUT STREAK
+            </span>
+
+            <strong>
+                12 🔥
+            </strong>
+
+            <small>
+                Consecutive workout days
+            </small>
+
+        </article>
+
+
+        <article class="member-stat">
+
+            <span>
+                ATTENDANCE
+            </span>
+
+            <strong>
+                92%
+            </strong>
+
+            <small>
+                This month
+            </small>
+
+        </article>
+
+
+        <article class="member-stat">
+
+            <span>
+                CALORIES
+            </span>
+
+            <strong>
+                4,820
+            </strong>
+
+            <small>
+                Burned this month
+            </small>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CHECK-IN + GOAL
+     ===================================================== -->
+
+<section
+    class="member-section"
+    id="checkin"
+>
+
+    <div class="member-grid">
+
+
+        <!-- CHECK-IN -->
+
+        <article class="member-panel">
+
+            <p class="kicker">
+                GYM ACCESS
+            </p>
+
+            <h2>
+                Your member number
+            </h2>
+
+            <div class="member-number-display">
+                4062
+            </div>
+
+            <p class="member-muted">
+
+                Enter this four-digit number at the
+                gym reception to record your attendance.
+
+            </p>
+
+
+            <form id="memberCheckinForm">
+
+                <input
+                    id="memberCheckinNumber"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    placeholder="Enter 4 digits"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    CHECK IN
+                </button>
+
+            </form>
+
+
+            <div
+                id="memberCheckinResult"
+                class="member-result"
+            ></div>
+
+        </article>
+
+
+
+        <!-- GOAL -->
+
+        <article class="member-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="kicker">
+                        CURRENT GOAL
+                    </p>
+
+                    <h2>
+                        Build Strength
+                    </h2>
+
+                </div>
+
+                <span class="goal-percent">
+                    76%
+                </span>
+
+            </div>
+
+
+            <div class="goal-ring">
+
+                <div>
+
+                    <strong>
+                        76%
+                    </strong>
+
+                    <small>
+                        COMPLETE
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="goal-info">
+
+                <span>
+                    Start
+                    <b>
+                        01 JUL
+                    </b>
+                </span>
+
+                <span>
+                    Target
+                    <b>
+                        31 AUG
+                    </b>
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TODAY'S WORKOUT
+     ===================================================== -->
+
+<section
+    class="member-section"
+    id="workout"
+>
+
+    <div class="section-heading compact">
+
+        <p class="kicker">
+            TODAY'S PROTOCOL
+        </p>
+
+        <h2>
+            Upper Body · Strength
+        </h2>
+
+        <p>
+            Recommended based on your current fitness
+            goal and recent workout history.
+        </p>
+
+    </div>
+
+
+    <div class="workout-member-grid">
+
+
+        <article class="member-panel workout-panel">
+
+
+            <div class="workout-top">
+
+                <div>
+
+                    <span>
+                        INTERMEDIATE
+                    </span>
+
+                    <h3>
+                        55 MINUTES
+                    </h3>
+
+                </div>
+
+                <span class="workout-status">
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="exercise-list">
+
+
+                <div class="exercise-row">
+
+                    <div class="exercise-number">
+                        01
+                    </div>
+
+                    <div class="exercise-info">
+
+                        <strong>
+                            Bench Press
+                        </strong>
+
+                        <small>
+                            4 sets × 10 reps
+                        </small>
+
+                    </div>
+
+                    <b>
+                        60 kg
+                    </b>
+
+                </div>
+
+
+                <div class="exercise-row">
+
+                    <div class="exercise-number">
+                        02
+                    </div>
+
+                    <div class="exercise-info">
+
+                        <strong>
+                            Lat Pulldown
+                        </strong>
+
+                        <small>
+                            3 sets × 12 reps
+                        </small>
+
+                    </div>
+
+                    <b>
+                        45 kg
+                    </b>
+
+                </div>
+
+
+                <div class="exercise-row">
+
+                    <div class="exercise-number">
+                        03
+                    </div>
+
+                    <div class="exercise-info">
+
+                        <strong>
+                            Shoulder Press
+                        </strong>
+
+                        <small>
+                            3 sets × 10 reps
+                        </small>
+
+                    </div>
+
+                    <b>
+                        25 kg
+                    </b>
+
+                </div>
+
+
+                <div class="exercise-row">
+
+                    <div class="exercise-number">
+                        04
+                    </div>
+
+                    <div class="exercise-info">
+
+                        <strong>
+                            Bicep Curl
+                        </strong>
+
+                        <small>
+                            3 sets × 12 reps
+                        </small>
+
+                    </div>
+
+                    <b>
+                        12 kg
+                    </b>
+
+                </div>
+
+
+                <div class="exercise-row">
+
+                    <div class="exercise-number">
+                        05
+                    </div>
+
+                    <div class="exercise-info">
+
+                        <strong>
+                            Triceps Pushdown
+                        </strong>
+
+                        <small>
+                            3 sets × 12 reps
+                        </small>
+
+                    </div>
+
+                    <b>
+                        20 kg
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                id="startWorkout"
+                class="btn primary workout-button"
+            >
+                BEGIN WORKOUT
+            </button>
+
+        </article>
+
+
+
+        <!-- SMART INSIGHT -->
+
+        <article class="member-panel insight-panel">
+
+            <p class="kicker">
+                SMART FITNESS ASSISTANT
+            </p>
+
+            <div class="ai-icon">
+                ✦
+            </div>
+
+            <h3>
+                Today's insight
+            </h3>
+
+            <p>
+
+                Your training volume increased by
+                <strong>
+                    14%
+                </strong>
+                this week.
+
+                Keep today's session moderate to
+                protect recovery while maintaining
+                your current strength progression.
+
+            </p>
+
+
+            <div class="ai-stat">
+
+                <span>
+                    RECOVERY
+                </span>
+
+                <strong>
+                    82%
+                </strong>
+
+            </div>
+
+
+            <div class="ai-stat">
+
+                <span>
+                    READINESS
+                </span>
+
+                <strong>
+                    87%
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn secondary"
+                id="aiRecommendation"
+            >
+                GET RECOMMENDATION
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRESS
+     ===================================================== -->
+
+<section
+    class="member-section"
+    id="progress"
+>
+
+    <div class="section-heading compact">
+
+        <p class="kicker">
+            PERFORMANCE TELEMETRY
+        </p>
+
+        <h2>
+            Your progress.
+        </h2>
+
+    </div>
+
+
+    <div class="progress-grid">
+
+
+        <!-- Weight -->
+
+        <article class="member-panel">
+
+            <div class="progress-header">
+
+                <div>
+
+                    <span>
+                        WEIGHT
+                    </span>
+
+                    <strong>
+                        76.4 kg
+                    </strong>
+
+                </div>
+
+                <b class="positive">
+                    -3.6 kg
+                </b>
+
+            </div>
+
+
+            <div class="mini-chart">
+
+                <i style="height:80%"></i>
+
+                <i style="height:70%"></i>
+
+                <i style="height:65%"></i>
+
+                <i style="height:58%"></i>
+
+                <i style="height:52%"></i>
+
+                <i style="height:45%"></i>
+
+                <i style="height:40%"></i>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- Strength -->
+
+        <article class="member-panel">
+
+            <div class="progress-header">
+
+                <div>
+
+                    <span>
+                        STRENGTH
+                    </span>
+
+                    <strong>
+                        +18%
+                    </strong>
+
+                </div>
+
+                <b class="positive">
+                    ↗ IMPROVING
+                </b>
+
+            </div>
+
+
+            <div class="strength-bars">
+
+                <div>
+                    <span>BENCH</span>
+                    <i style="width:78%"></i>
+                </div>
+
+                <div>
+                    <span>SQUAT</span>
+                    <i style="width:86%"></i>
+                </div>
+
+                <div>
+                    <span>DEADLIFT</span>
+                    <i style="width:72%"></i>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NUTRITION
+     ===================================================== -->
+
+<section
+    class="member-section"
+    id="nutrition"
+>
+
+    <div class="section-heading compact">
+
+        <p class="kicker">
+            FUEL SYSTEM
+        </p>
+
+        <h2>
+            Nutrition today.
+        </h2>
+
+    </div>
+
+
+    <div class="nutrition-grid">
+
+
+        <article class="nutrition-card">
+
+            <span>
+                CALORIES
+            </span>
+
+            <strong>
+                1,820
+                <small>
+                    / 2,200 kcal
+                </small>
+            </strong>
+
+            <div class="nutrition-bar">
+
+                <i style="width:83%"></i>
+
+            </div>
+
+        </article>
+
+
+        <article class="nutrition-card">
+
+            <span>
+                PROTEIN
+            </span>
+
+            <strong>
+                125g
+                <small>
+                    / 160g
+                </small>
+            </strong>
+
+            <div class="nutrition-bar cyan">
+
+                <i style="width:78%"></i>
+
+            </div>
+
+        </article>
+
+
+        <article class="nutrition-card">
+
+            <span>
+                CARBS
+            </span>
+
+            <strong>
+                210g
+                <small>
+                    / 280g
+                </small>
+            </strong>
+
+            <div class="nutrition-bar orange">
+
+                <i style="width:75%"></i>
+
+            </div>
+
+        </article>
+
+
+        <article class="nutrition-card">
+
+            <span>
+                WATER
+            </span>
+
+            <strong>
+                2.1L
+                <small>
+                    / 3.0L
+                </small>
+            </strong>
+
+            <div class="nutrition-bar cyan">
+
+                <i style="width:70%"></i>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCHEDULE
+     ===================================================== -->
+
+<section
+    class="member-section"
+    id="schedule"
+>
+
+    <div class="section-heading compact">
+
+        <p class="kicker">
+            UPCOMING
+        </p>
+
+        <h2>
+            Your schedule.
+        </h2>
+
+    </div>
+
+
+    <div class="member-schedule">
+
+
+        <article>
+
+            <span>
+                TUE · 18 AUG
+            </span>
+
+            <h3>
+                Leg Strength
+            </h3>
+
+            <p>
+                06:30 PM · 50 minutes
+            </p>
+
+            <button
+                class="member-book"
+                data-session="Leg Strength"
+            >
+                BOOK
+            </button>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                THU · 20 AUG
+            </span>
+
+            <h3>
+                Personal Training
+            </h3>
+
+            <p>
+                07:00 PM · Trainer Arjun
+            </p>
+
+            <button
+                class="member-book"
+                data-session="Personal Training"
+            >
+                BOOK
+            </button>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                SAT · 22 AUG
+            </span>
+
+            <h3>
+                Fitness Assessment
+            </h3>
+
+            <p>
+                10:00 AM · Main Studio
+            </p>
+
+            <button
+                class="member-book"
+                data-session="Fitness Assessment"
+            >
+                BOOK
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMBERSHIP
+     ===================================================== -->
+
+<section class="member-section">
+
+    <div class="membership-card">
+
+        <div>
+
+            <p class="kicker">
+                CURRENT MEMBERSHIP
+            </p>
+
+            <h2>
+                PRO
+            </h2>
+
+            <p>
+                Your membership is active.
+                Renewal in <strong>43 days</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="membership-details">
+
+            <span>
+                MONTHLY PLAN
+                <b>
+                    ₹1,999
+                </b>
+            </span>
+
+            <span>
+                VALID UNTIL
+                <b>
+                    29 SEP 2026
+                </b>
+            </span>
+
+            <span>
+                STATUS
+                <b class="positive">
+                    ACTIVE
+                </b>
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <span>
+        GYMVERSE © 2026
+    </span>
+
+    <span>
+        MEMBER DASHBOARD · SMART FITNESS MANAGEMENT
+    </span>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MEMBER CHECK-IN
+   ===================================================== */
+
+const checkinForm =
+    document.getElementById(
+        "memberCheckinForm"
+    );
+
+
+if (checkinForm) {
+
+    checkinForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const input =
+                document.getElementById(
+                    "memberCheckinNumber"
+                );
+
+
+            const result =
+                document.getElementById(
+                    "memberCheckinResult"
+                );
+
+
+            const number =
+                input.value.trim();
+
+
+            if (!/^\d{4}$/.test(number)) {
+
+                result.textContent =
+                    "Please enter exactly 4 digits.";
+
+                result.className =
+                    "member-result error";
+
+                return;
+
+            }
+
+
+            if (number === "4062") {
+
+                const time =
+                    new Date().toLocaleTimeString(
+                        [],
+                        {
+                            hour:"2-digit",
+                            minute:"2-digit"
+                        }
+                    );
+
+
+                localStorage.setItem(
+                    "gymverseLastCheckin",
+                    JSON.stringify({
+
+                        memberNumber:"4062",
+
+                        memberName:
+                            "Jeet Rangrej",
+
+                        time:time,
+
+                        date:
+                            new Date()
+                                .toLocaleDateString()
+
+                    })
+                );
+
+
+                result.textContent =
+                    `✓ Check-in successful at ${time}. Welcome Jeet!`;
+
+                result.className =
+                    "member-result success";
+
+
+                input.value = "";
+
+            }
+
+            else {
+
+                result.textContent =
+                    "✕ Invalid member number. Demo: 4062";
+
+                result.className =
+                    "member-result error";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   START WORKOUT
+   ===================================================== */
+
+const startWorkout =
+    document.getElementById(
+        "startWorkout"
+    );
+
+
+if (startWorkout) {
+
+    startWorkout.addEventListener(
+        "click",
+        function() {
+
+            startWorkout.textContent =
+                "✓ WORKOUT ACTIVE";
+
+            startWorkout.disabled =
+                true;
+
+            alert(
+                "Workout started!\n\nUpper Body · Strength\nDuration: 55 minutes"
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   AI FITNESS RECOMMENDATION
+   ===================================================== */
+
+const aiRecommendation =
+    document.getElementById(
+        "aiRecommendation"
+    );
+
+
+if (aiRecommendation) {
+
+    aiRecommendation.addEventListener(
+        "click",
+        function() {
+
+            alert(
+                "SMART RECOMMENDATION\n\n" +
+
+                "Today's recommendation:\n\n" +
+
+                "• Keep intensity at 75–80%\n" +
+
+                "• Drink 500ml water before training\n" +
+
+                "• Complete all 5 exercises\n" +
+
+                "• Take 60–90 sec rest between sets\n\n" +
+
+                "Your current readiness is 87%."
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   MEMBER APPOINTMENTS
+   ===================================================== */
+
+const memberBookings =
+    document.querySelectorAll(
+        ".member-book"
+    );
+
+
+memberBookings.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                const session =
+                    button.dataset.session;
+
+
+                localStorage.setItem(
+                    "gymverseMemberAppointment",
+                    JSON.stringify({
+
+                        session:session,
+
+                        bookedAt:
+                            new Date()
+                                .toISOString()
+
+                    })
+                );
+
+
+                button.textContent =
+                    "✓ BOOKED";
+
+                button.disabled =
+                    true;
+
+
+                alert(
+                    `${session} has been booked successfully.`
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   LOAD SAVED APPOINTMENT
+   ===================================================== */
+
+const savedAppointment =
+    localStorage.getItem(
+        "gymverseMemberAppointment"
+    );
+
+
+if (savedAppointment) {
+
+    try {
+
+        const appointment =
+            JSON.parse(
+                savedAppointment
+            );
+
+
+        memberBookings.forEach(
+            button => {
+
+                if (
+                    button.dataset.session ===
+                    appointment.session
+                ) {
+
+                    button.textContent =
+                        "✓ BOOKED";
+
+                    button.disabled =
+                        true;
+
+                }
+
+            }
+        );
+
+    }
+
+    catch(error) {
+
+        console.log(
+            "Unable to load appointment."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   LOGOUT
+   ===================================================== */
+
+const logoutButton =
+    document.querySelector(
+        ".header-btn"
+    );
+
+
+if (logoutButton) {
+
+    logoutButton.addEventListener(
+        "click",
+        function() {
+
+            localStorage.removeItem(
+                "gymverseLoggedIn"
+            );
+
+            localStorage.removeItem(
+                "gymverseRole"
+            );
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     MEMBER PAGE CSS
+     ===================================================== -->
+
+<style>
+
+
+/* =====================================================
+   MEMBER HERO
+   ===================================================== */
+
+.member-hero {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:75px 6vw 55px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.3fr .7fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+
+.member-welcome h1 {
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            82px
+        );
+
+    line-height:.92;
+
+    letter-spacing:-.07em;
+
+    margin:18px 0;
+
+}
+
+
+.member-welcome h1 span {
+
+    color:var(--lime);
+
+}
+
+
+.member-welcome > p:not(.kicker) {
+
+    color:var(--muted);
+
+    max-width:620px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+.member-actions {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:28px;
+
+}
+
+
+/* =====================================================
+   FITNESS SCORE
+   ===================================================== */
+
+.fitness-score {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151b16,
+            #10151b
+        );
+
+    border:1px solid #35442b;
+
+    border-radius:28px;
+
+    padding:30px;
+
+}
+
+
+.score-label {
+
+    font:
+        10px
+        "DM Mono",
+        monospace;
+
+    color:var(--muted);
+
+    letter-spacing:.12em;
+
+}
+
+
+.score-ring {
+
+    width:210px;
+
+    height:210px;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            var(--lime) 0 87%,
+            #29302d 87%
+        );
+
+    display:grid;
+
+    place-items:center;
+
+    margin:20px 0;
+
+}
+
+
+.score-ring > div {
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    background:var(--panel);
+
+    display:grid;
+
+    place-items:center;
+
+    align-content:center;
+
+    text-align:center;
+
+}
+
+
+.score-ring strong {
+
+    font-size:52px;
+
+}
+
+
+.score-ring small {
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+
+.fitness-score > span {
+
+    color:var(--lime);
+
+    font:
+        10px
+        "DM Mono",
+        monospace;
+
+}
+
+
+/* =====================================================
+   MEMBER SECTION
+   ===================================================== */
+
+.member-section {
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:30px 6vw;
+
+}
+
+
+/* =====================================================
+   STATS
+   ===================================================== */
+
+.member-stat-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.member-stat {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:19px;
+
+    padding:21px;
+
+}
+
+
+.member-stat > span {
+
+    display:block;
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.member-stat > strong {
+
+    display:block;
+
+    font-size:31px;
+
+    margin:10px 0 3px;
+
+}
+
+
+.member-stat > small {
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+
+.member-id-large {
+
+    color:var(--lime);
+
+    font-family:"DM Mono",monospace;
+
+}
+
+
+/* =====================================================
+   MEMBER GRID
+   ===================================================== */
+
+.member-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+.member-panel {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    padding:25px;
+
+}
+
+
+.member-panel h2 {
+
+    font-size:25px;
+
+    letter-spacing:-.04em;
+
+    margin-top:6px;
+
+}
+
+
+.member-number-display {
+
+    font:
+        700
+        65px
+        "DM Mono",
+        monospace;
+
+    color:var(--lime);
+
+    letter-spacing:.12em;
+
+    margin:22px 0 8px;
+
+}
+
+
+.member-muted {
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    max-width:500px;
+
+    line-height:1.7;
+
+}
+
+
+.member-panel form {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+.member-panel input {
+
+    width:100%;
+
+    background:#090c11;
+
+    color:var(--text);
+
+    border:1px solid var(--line);
+
+    border-radius:12px;
+
+    padding:13px;
+
+    outline:none;
+
+    letter-spacing:.2em;
+
+}
+
+
+.member-panel input:focus {
+
+    border-color:var(--lime);
+
+}
+
+
+.member-result {
+
+    min-height:20px;
+
+    margin-top:12px;
+
+    font-size:10px;
+
+}
+
+
+.member-result.success {
+
+    color:var(--lime);
+
+}
+
+
+.member-result.error {
+
+    color:var(--danger);
+
+}
+
+
+/* =====================================================
+   GOAL
+   ===================================================== */
+
+.goal-percent {
+
+    color:var(--lime);
+
+    font:
+        14px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.goal-ring {
+
+    width:180px;
+
+    height:180px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            var(--lime) 0 76%,
+            #29302d 76%
+        );
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.goal-ring > div {
+
+    width:135px;
+
+    height:135px;
+
+    border-radius:50%;
+
+    background:var(--panel);
+
+    display:grid;
+
+    place-items:center;
+
+    align-content:center;
+
+    text-align:center;
+
+}
+
+
+.goal-ring strong {
+
+    font-size:36px;
+
+}
+
+
+.goal-ring small {
+
+    color:var(--muted);
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.goal-info {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid var(--line);
+
+    padding-top:12px;
+
+}
+
+
+.goal-info span {
+
+    color:var(--muted);
+
+    font-size:10px;
+
+}
+
+
+.goal-info b {
+
+    display:block;
+
+    color:var(--text);
+
+    margin-top:3px;
+
+}
+
+
+/* =====================================================
+   WORKOUT
+   ===================================================== */
+
+.workout-member-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        1.35fr .65fr;
+
+    gap:15px;
+
+}
+
+
+.workout-top {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:1px solid var(--line);
+
+    padding-bottom:18px;
+
+}
+
+
+.workout-top span:first-child {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.workout-top h3 {
+
+    margin-top:5px;
+
+    font-size:18px;
+
+}
+
+
+.workout-status {
+
+    color:var(--lime);
+
+    border:1px solid #35442b;
+
+    padding:6px 8px;
+
+    border-radius:20px;
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.exercise-list {
+
+    display:grid;
+
+    gap:8px;
+
+    margin-top:15px;
+
+}
+
+
+.exercise-row {
+
+    display:grid;
+
+    grid-template-columns:
+        38px 1fr auto;
+
+    gap:12px;
+
+    align-items:center;
+
+    background:#0c1016;
+
+    border:1px solid #1f2630;
+
+    border-radius:13px;
+
+    padding:11px;
+
+}
+
+
+.exercise-number {
+
+    color:var(--lime);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.exercise-info strong {
+
+    display:block;
+
+    font-size:11px;
+
+}
+
+
+.exercise-info small {
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+
+.exercise-row > b {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.workout-button {
+
+    margin-top:15px;
+
+    width:100%;
+
+}
+
+
+/* =====================================================
+   AI PANEL
+   ===================================================== */
+
+.insight-panel {
+
+    background:
+        linear-gradient(
+            145deg,
+            #141d19,
+            #10151b
+        );
+
+}
+
+
+.ai-icon {
+
+    width:50px;
+
+    height:50px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:#c9ff4a0b;
+
+    border:1px solid #35442b;
+
+    color:var(--lime);
+
+    font-size:24px;
+
+    margin:25px 0 15px;
+
+}
+
+
+.insight-panel h3 {
+
+    font-size:23px;
+
+}
+
+
+.insight-panel > p {
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    margin:10px 0 20px;
+
+}
+
+
+.insight-panel > p strong {
+
+    color:var(--lime);
+
+}
+
+
+.ai-stat {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:1px solid var(--line);
+
+    padding:12px 0;
+
+}
+
+
+.ai-stat span {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.ai-stat strong {
+
+    color:var(--lime);
+
+}
+
+
+/* =====================================================
+   PROGRESS
+   ===================================================== */
+
+.progress-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+.progress-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+.progress-header span {
+
+    display:block;
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.progress-header strong {
+
+    display:block;
+
+    font-size:27px;
+
+    margin-top:6px;
+
+}
+
+
+.positive {
+
+    color:var(--lime);
+
+}
+
+
+.mini-chart {
+
+    height:140px;
+
+    display:flex;
+
+    align-items:end;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+
+.mini-chart i {
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--lime),
+            #60782a
+        );
+
+    border-radius:
+        7px 7px 0 0;
+
+}
+
+
+.strength-bars {
+
+    display:grid;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+.strength-bars div {
+
+    display:grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+
+.strength-bars span {
+
+    color:var(--muted);
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.strength-bars i {
+
+    height:8px;
+
+    display:block;
+
+    background:var(--lime);
+
+    border-radius:99px;
+
+}
+
+
+/* =====================================================
+   NUTRITION
+   ===================================================== */
+
+.nutrition-grid {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+.nutrition-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    padding:20px;
+
+}
+
+
+.nutrition-card > span {
+
+    color:var(--muted);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.nutrition-card > strong {
+
+    display:block;
+
+    font-size:25px;
+
+    margin:12px 0;
+
+}
+
+
+.nutrition-card small {
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    font-weight:400;
+
+}
+
+
+.nutrition-bar {
+
+    height:7px;
+
+    background:#28302d;
+
+    border-radius:99px;
+
+    overflow:hidden;
+
+}
+
+
+.nutrition-bar i {
+
+    display:block;
+
+    height:100%;
+
+    background:var(--lime);
+
+    border-radius:99px;
+
+}
+
+
+.nutrition-bar.cyan i {
+
+    background:var(--cyan);
+
+}
+
+
+.nutrition-bar.orange i {
+
+    background:var(--orange);
+
+}
+
+
+/* =====================================================
+   SCHEDULE
+   ===================================================== */
+
+.member-schedule {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+
+.member-schedule article {
+
+    background:
+        linear-gradient(
+            145deg,
+            #151a22,
+            #10141b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+
+.member-schedule article > span {
+
+    color:var(--lime);
+
+    font:
+        9px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.member-schedule h3 {
+
+    margin:18px 0 4px;
+
+    font-size:19px;
+
+}
+
+
+.member-schedule p {
+
+    color:var(--muted);
+
+    font-size:10px;
+
+}
+
+
+.member-book {
+
+    margin-top:18px;
+
+    padding:9px 13px;
+
+    border-radius:10px;
+
+    border:1px solid var(--line);
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:9px;
+
+}
+
+
+.member-book:hover {
+
+    color:var(--lime);
+
+    border-color:var(--lime);
+
+}
+
+
+.member-book:disabled {
+
+    color:var(--lime);
+
+    border-color:#35442b;
+
+}
+
+
+/* =====================================================
+   MEMBERSHIP
+   ===================================================== */
+
+.membership-card {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172016,
+            #10151b
+        );
+
+    border:1px solid #35442b;
+
+    border-radius:24px;
+
+    padding:28px;
+
+}
+
+
+.membership-card h2 {
+
+    font-size:42px;
+
+    color:var(--lime);
+
+    margin:5px 0;
+
+}
+
+
+.membership-card p {
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+
+.membership-details {
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+.membership-details span {
+
+    color:var(--muted);
+
+    font:
+        8px
+        "DM Mono",
+        monospace;
+
+}
+
+
+.membership-details b {
+
+    display:block;
+
+    color:var(--text);
+
+    margin-top:6px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media(max-width:1000px) {
+
+    .member-hero {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .member-stat-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .workout-member-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .nutrition-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:700px) {
+
+    .member-hero {
+
+        padding:
+            55px 18px
+            35px;
+
+    }
+
+    .member-section {
+
+        padding:
+            25px 18px;
+
+    }
+
+    .member-grid,
+    .progress-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .member-stat-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .nutrition-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .member-schedule {
+
+        grid-template-columns:1fr;
+
+    }
+
+    .member-actions {
+
+        flex-direction:column;
+
+    }
+
+    .member-actions .btn {
+
+        text-align:center;
+
+    }
+
+    .member-number-display {
+
+        font-size:48px;
+
+    }
+
+    .membership-card {
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .membership-details {
+
+        width:100%;
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:15px;
+
+    }
+
+}
+
+
+@media(max-width:450px) {
+
+    .member-welcome h1 {
+
+        font-size:48px;
+
+    }
+
+    .fitness-score {
+
+        padding:20px;
+
+    }
+
+    .score-ring {
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .score-ring > div {
+
+        width:135px;
+
+        height:135px;
+
+    }
+
+    .exercise-row {
+
+        grid-template-columns:
+            30px 1fr;
+
+    }
+
+    .exercise-row > b {
+
+        display:none;
+
+    }
+
+}
+
+</style>
+
+
+</body>
+
+</html>
